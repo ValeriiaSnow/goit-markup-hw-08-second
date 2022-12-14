@@ -1,0 +1,33 @@
+.what-do {
+    padding-top: 0;
+}
+
+.what-do__list{
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.what-do__wrap{
+    position: relative;
+}
+
+.what-do__description{
+    @include basic(700, 14px, 1.14, center, 0.03em);
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--clear-white);
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+}
+
+.what-do__title {
+    @include basic(700, 36px, 1.17, center, 0.03em);
+}
+
+.what-do__title {
+    color: var(--title-color);
+}

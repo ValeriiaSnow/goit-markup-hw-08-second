@@ -1,0 +1,73 @@
+.type-work-photo__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.type-work-photo__item {
+    background-color: var(--clear-white);
+    border: none;
+    width: 370px;
+}
+
+/* Wise choice = using %
+For instance:
+.type-work-photo__item {
+    width: calc((100% - 60px) /3);}
+where 60px = 2(amount of margins = n-1) * 30px(margins)
+*/
+
+.type-work__container{
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
+
+.type-work-photo__title {
+    @include basic(700, 18px, 2, null, 0.06em);
+    color: var(--title-color);
+}
+
+.type-work-photo__subtitle {
+    @include basic(400, 16px, 1.88, null, 0.03em);
+    color: var(--text-color);
+    margin-top: 4px;
+}
+
+.type-work-photo__link{
+    text-decoration: none;
+    /* i need it for type-work-photo__link:hover and type-work-photo__link:focus*/
+    display: block;
+    transition: box-shadow 250ms var(--type-of-show);
+    .type-work-photo__list &:hover, .type-work-photo__list &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+/* hidden description */
+.type-work-photo__wrap{
+    /* i need it for hidden description */
+    position: relative;
+    overflow: hidden;
+}
+
+.type-work-photo__description{
+    @include basic(400, 18px, 1.56, null, 0.03em);
+    position: absolute;
+    top: 0;
+    background: rgba(33, 150, 243, 0.9);
+    color: var(--clear-white);
+    padding: 63px 24px;
+    transform: translateY(100%);
+    /* transition: transform 250ms var(--type-of-show); */
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--type-of-show);
+    /* but i can also use overflow: scroll; */
+    overflow: auto;
+    height: 100%;
+    .type-work-photo__item:hover &, .type-work-photo__item:focus &{
+        transform: translateY(0);
+    }
+}

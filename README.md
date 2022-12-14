@@ -1,2 +1,2 @@
-# goit-markup-hw-08-second
-goit-markup-hw-08-second
+# goit-markup-hw-07
+HW7 GoIt

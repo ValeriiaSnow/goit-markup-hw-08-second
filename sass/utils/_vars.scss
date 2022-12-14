@@ -1,0 +1,15 @@
+:root{
+    --accent-color: #2196F3;
+    --title-color: #212121;
+    --text-color: #757575;
+    --clear-white: #FFFFFF;
+    --type-of-show: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin basic($fw, $fs, $fh, $texta, $lets){
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $fh;
+    text-align: $texta;
+    letter-spacing: $lets;
+}
