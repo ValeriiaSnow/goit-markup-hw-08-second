@@ -9,7 +9,7 @@
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    max-width: 100%;
+    // max-width: 100%;
     @media screen and (min-width: 1200px) {
         margin-top: 50px;
     };
@@ -20,13 +20,14 @@
     // height: 92px;
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
+    max-width: 210px;
+    width: 100%;
     flex-basis: calc((100% - 30px) / 2);
     @media screen and (min-width: 480px) {
-        width: calc((100% - 30px) / 2)
+        max-width: calc((100% - 30px) / 2)
     };
     @media screen and (min-width: 768px) {
-        width: calc((100% - 60px) / 3);
+        max-width: calc((100% - 60px) / 3);
     };
     @media screen and (min-width: 1200px) {
         max-width: calc((100% - 150px) / 6);
