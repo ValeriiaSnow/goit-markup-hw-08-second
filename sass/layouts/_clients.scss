@@ -1,45 +1,40 @@
 .clients__title{
-    @include basic(700, 36px, 1.17, center, 0.03em);
+    @include basic(700, 28px, 1.17, center, 0.03em);
     color: #212121;
+    @include tablet {
+        @include basic(700, 28px, 1.17, center, 0.03em);
+    };
+    @include desktop {
+        @include basic(700, 36px, 1.17, center, 0.03em);
+    };
 }
 
-.clients__list{
-    margin-top: 30px;
+.clients__list {
     display: flex;
     justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
-    // max-width: 100%;
-    @media screen and (min-width: 1200px) {
+    gap: 30px;
+    margin-top: 30px;
+    @include desktop {
         margin-top: 50px;
     };
 }
 
-.clients__item{
-    // width: 210px;
-    // height: 92px;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 210px;
-    width: 100%;
+.clients__item {
     flex-basis: calc((100% - 30px) / 2);
-    @media screen and (min-width: 480px) {
-        max-width: calc((100% - 30px) / 2)
-    };
-    @media screen and (min-width: 768px) {
-        max-width: calc((100% - 60px) / 3);
-    };
-    @media screen and (min-width: 1200px) {
-        max-width: calc((100% - 150px) / 6);
-    };
+    text-align: center;
+    @include tablet {
+        flex-basis: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+        flex-basis: calc((100% - 150px) / 6);
+    }
 }
 
 .clients__icon{
-    // width: 100%;
     display: block;
     margin-right: auto;
     margin-left: auto;
-
     transition: fill 250ms var(--type-of-show);
     .clients__link:hover &, .clients__link:focus &{
         fill: #2196F3;
@@ -48,14 +43,19 @@
 
 .clients__link{
     box-sizing: border-box;
-    display: flex;
-
+    display: block;
+    height: 92px;
+    padding: 16px 52px;
+    @include tablet {
+        padding: 16px 60px;
+    };
+    @include desktop {
+        padding: 16px 32px;
+    };
     align-items: center;
     justify-content: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    width: 100%;
-    // height: 100%;
     fill: #AFB1B8;
     transition: border-color 250ms var(--type-of-show);
     &:hover, &:focus{

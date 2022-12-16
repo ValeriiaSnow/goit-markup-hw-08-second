@@ -4,13 +4,16 @@
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    @media screen and (min-width: 480px) {
-        max-width: 480px
+    @include mobile {
+        flex-basis: 480px;
+        // width: 100%;
     };
-    @media screen and (min-width: 768px) {
-        max-width: 768px
+    @include tablet {
+        flex-basis: 768px;
+        // width: 100%;
     };
-    @media screen and (min-width: 1200px) {
-        max-width: 1200px
+    @include desktop {
+        flex-basis: 1200px;
+        // width: 100%;
     };
 }

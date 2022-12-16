@@ -77,17 +77,17 @@ img {
 }
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    flex-basis: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    flex-basis: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    flex-basis: 1200px;
   }
 }
 
